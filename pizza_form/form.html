@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pizza Form</title>
+    <style media="screen">
+
+      body {
+        background-color: lightblue;
+      }
+      p, h1{
+        text-align:center;
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Order</h1>
+
+    <form action="">
+      <!-- action is blank, will just go to form page -->
+
+      <p>
+      <label for="first_name">First name: </label>
+      <input type="text" name="first_name" value="" placeholder="John">
+      </p>
+      <!-- value is not always required- will prepopulate form with that value but the user can change it..
+    placeholder is grayed out and more of a hint of what to write. you can also hide label with CSS  -->
+
+      <p>
+      <label for="last_name">Last name: </label>
+      <input type="text" name="last_name" value="" placeholder="Smith">
+      </p>
+
+
+      <p>
+      <label for="address">Address: </label>
+      <input type="text" name="address" value="" placeholder="1234 street">
+      </p>
+
+      <p>
+      <label for="suite">Suite: </label>
+      <input type="text" name="suite" value="" placeholder="">
+      </p>
+
+      <p>
+      <label for="city">City: </label>
+      <input type="text" name="city" value="" placeholder="">
+      </p>
+
+      <p>
+      <label for="state">State: </label>
+      <input type="text" name="state" value="" placeholder="ST">
+      </p>
+
+      <p>
+      <label for="zip">Zip: </label>
+      <input type="text" name="zip" value="" placeholder="11111">
+      </p>
+
+      <p>
+        <label for= "size"> Pizza Size
+        </label> <br>
+        <input type="radio" name="size" value="small">Small<br>
+        <input type="radio" name="size" value="medium">Medium<br>
+        <input type="radio" name="size" value="large">Large<br>
+      </p>
+
+      <p>
+        <label for= "topping"> Pizza Toppings (Check all that apply)
+        </label> <br>
+        <input type="checkbox" name="topping[]" value="Cheese" checked>Cheese<br>
+        <!-- check box must have a value. this checkbox belongs to a pizza toppping category-same name differnt values. the name needs [] if it is an array/list of values -->
+
+        <input type="checkbox" name="topping[]" value="mushrooms">Mushrooms<br>
+        <input type="checkbox" name="topping[]" value="pepperoni">Pepperoni<br>
+      </p>
+
+      <p>
+        <label for= "cheese_amount">Amount of Cheese
+        </label>
+        <br>
+        <select name="cheese" id="">
+          <option value="regular">Regular</option>
+          <option value="extra">Extra</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="comments">Comments: </label>
+        <br>
+        <textarea name="comments" rows="10" cols="30"></textarea>
+      </p>
+
+      <p>
+      <input type="submit" value="Place Order">
+      </p>
+
+      <!-- get request created new url with all the information you added into your form
+
+     the brackets around the topping tells the computer that there is more than one option/ it is an array -->
+
+      <!-- file:///Users/amandabarry/Documents/GRADSCHOOL/second%20year/CIM%20693/pizza_form/form.html?
+
+      first_name=Amanda
+      &
+      last_name=Barry
+      &
+      address=4+seward
+      &
+      topping[]=Cheese
+      &topping[]=Pepperoni
+      &
+      comments=hi -->
+
+    </form>
+
+
+  </body>
+</html>
